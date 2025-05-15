@@ -137,7 +137,8 @@ Jako użytkownik, chcę wybrać opcję "Zamknij okno", aby zakończyć wyświetl
 | JDBC (SQL Server Driver) | Sterownik do komunikacji z bazą danych SQL Server | 12.10.0            |
 
 **Dane źródłowe:**
-
+- `es.png`
+- `pl.png`
 
 ---
 
@@ -153,12 +154,8 @@ Jako użytkownik, chcę wybrać opcję "Zamknij okno", aby zakończyć wyświetl
 
 
 **Wymagane pliki:**
-- `wojewodztwa-max.geojson`
-- `powiaty-medium.geojson`
-- `biernosc_wykszt.csv`
-- `zatr_wiek.csv`
-- `zatr_wyksztalcenie.csv`
-- `zatr_plec.csv`
+- `es.png`
+- `pl.png`
   
 ---
 
@@ -166,24 +163,133 @@ Jako użytkownik, chcę wybrać opcję "Zamknij okno", aby zakończyć wyświetl
 
 ### a. Scenariusze testów
 
+###Okno główne
 1. **Test uruchomienia aplikacji**
-   - Oczekiwany rezultat: Aplikacja otwiera się bez błędów.
+- Oczekiwany rezultat: Aplikacja otwiera się bez błędów.
 
+2. **Test wyboru kategorii**
+- Oczekiwany rezultat: Po rozwinięciu listy pojawiają się dostępne kategorie, które można wybrać.
+
+3. **Test przycisku 'Rozpocznij'**
+- Oczekiwany rezultat: Po kliknięciu przycisku 'Rozpocznij', aplikacja przechodzi do trybu nauki z wybraną kategorią.
+
+4. **Test menu 'O programie'**
+- Oczekiwany rezultat: Po kliknięciu przycisku rozwija się menu z informacjami o aplikacji i instrukcją, po wyborze których otworzą się odpowiednie okna.
+
+5. **Test menu 'Wyjście'**
+- Oczekiwany rezultat: Po kliknięciu opcji 'Wyjście', aplikacja zamyka się.
+
+6. **Test przycisku 'Modyfikuj'**
+- Oczekiwany rezultat: Po kliknięciu przycisku 'Modyfikuj', otwiera się nowe okno do modyfikacji fiszek.
+
+###Okno modyfikacji
+7.**Test ładowania słówek do tabeli**
+- Oczekiwany rezultat: Po wybraniu kategorii i kliknięciu przycisku 'Załaduj', dane pojawiają się w tabeli.
+
+8. **Test edycji słówka**
+- Oczekiwany rezultat: Po kliknięciu przycisku 'Edytuj' w tabeli, otwiera się okno edycji.
+
+9. **Test usunięcia słówka**
+Oczekiwany rezultat: Po kliknięciu 'Usuń' pojawia się pytanie potwierdzające. Po zatwierdzeniu słówko zostaje usunięte.
+
+10. **Test tworzenia nowej kategorii**
+- Oczekiwany rezultat: Po wpisaniu nowej nazwy i kliknięciu 'Dodaj', kategoria zostaje zapisana w bazie.
+
+11. **Test edycji kategorii**
+- Oczekiwany rezultat: Po wyborze aktualnej nazwy kategorii i wpisaniu nowej, zatwierdzając przyciskiem 'Edytuj', nazwa kategorii zostaje zaktualizowana.
+
+12. **Test dodania nowego słówka**
+- Oczekiwany rezultat: Po wpisaniu polskiego i hiszpańskiego tłumaczenia słówka, zatwierdzając przyciskiem 'Dodaj', słówko zostaje dodane do wybranej kategorii.
+
+13. **Test odświeżania danych**
+- Oczekiwany rezultat: Po kliknięciu 'Odśwież', tabela aktualizuje się o najnowsze dane.
+
+14. **Test powrotu do strony głównej**
+Oczekiwany rezultat: Po kliknięciu opcji w menu, aplikacja wraca do okna głównego.
+
+15. **Test instrukcji w oknie modyfikacji**
+Oczekiwany rezultat: Po kliknięciu menu 'Pomoc', pojawia się instrukcja korzystania z aplikacji.
+
+16. **Test wyjścia z aplikacji z okna modyfikacji**
+Oczekiwany rezultat: Aplikacja zamyka się, po wybraniu opcji 'Wyjdź' z menu.
+
+Okno nauki
+17. **Test pobierania słówek z bazy**
+- Oczekiwany rezultat: Po rozpoczęciu sesji, słówka są poprawnie pobierane z wybranej kategorii.
+
+18. **Test tłumaczenia słówka**
+- Oczekiwany rezultat: Użytkownik wpisuje tłumaczenie, aplikacja poprawnie ocenia jego odpowiedź.
+
+19. **Test informacji o poprawności**
+- Oczekiwany rezultat: Po kliknięciu przycisku 'Sprawdź poprawność', użytkownik otrzymuje komunikat o poprawności.
+
+20. **Test wyświetlania prawidłowej odpowiedzi**
+- Oczekiwany rezultat: Po kliknięciu 'Pokaż odpowiedź', poprawne tłumaczenie pojawia się w polu.
+
+21. **Test przycisków ze znakami diakrytycznymi**
+- Oczekiwany rezultat: Kliknięcie znaku dodaje go do pola tekstowego.
+
+22. **Test przycisków strzałek**
+- Oczekiwany rezultat: Kliknięcie strzałki powoduje przejście do kolejnego/poprzedniego słówka.
+
+23. **Test licznika postępu**
+- Oczekiwany rezultat: Licznik poprawnie pokazuje numer słówka i ile ich zostało.
+
+24. **Test zmiany języka**
+- Oczekiwany rezultat: Po kliknięciu flagi zmienia się kierunek tłumaczenia (PL->ES lub ES->PL).
+
+25.**Test wyniku końcowego**
+- Oczekiwany rezultat: Po zakończeniu sesji pojawia się okno z wynikiem i czasem nauki.
+
+26. **Test powrotu do strony głównej z okna nauki**
+- Oczekiwany rezultat: Aplikacja wraca do okna głównego po kliknięciu danej opcji w menu.
+
+27. **Test instrukcji w oknie nauki**
+- Oczekiwany rezultat: Menu 'Pomoc' otwiera instrukcję korzystania z fiszek.
+
+28. **Test wyjścia z aplikacji z okna nauki**
+- Oczekiwany rezultat: Aplikacja zamyka się po wybraniu opcji 'Wyjdź'.
+
+Okno wyniku
+29. **Test powrotu do strony głównej z okna wyniku**
+- Oczekiwany rezultat: Po wybraniu 'Strona główna' w menu, aplikacja wraca do strony głównej.
+
+30. **Test zamknięcia okna wyniku**
+- Oczekiwany rezultat: Po kliknięciu przycisku 'Zamknij okno' w menu, okno z wynikiem zamyka się.
+  
 ### b. Sprawozdanie z wykonania testów
 
-| Test                                     | Status   | Uwagi                                 |
-|------------------------------------------|----------|---------------------------------------|
-| Uruchomienie aplikacji                   | ✅       | Bez błędów                            |
-| Wyświetlanie mapy                        | ✅       | Poprawnie renderowana mapa            |
-| Przeciąganie mapy                        | ✅       | Działa poprawnie                      |
-| Zoomowanie mapy                          | ✅       | Reaguje na scroll                     |
-| Kliknięcie na region                     | ✅       | Dane wczytywane prawidłowo            |
-| Wykres zatrudnienia wg płci              | ✅       | Wykres rysuje się dynamicznie         |
-| Wykres zatrudnienia wg wykształcenia     | ✅       | Wykres rysuje się dynamicznie         |
-| Wykres zatrudnienia wg wieku             | ✅       | Wykres rysuje się dynamicznie         |
-| Wykres bierności zawodowej               | ✅       | Wykres rysuje się dynamicznie         |
-| Zamknięcie okna dashboardu               | ✅       | Okno zamyka się poprawnie             |
-| Obsługa braku danych                     | ✅       | Wyświetla komunikat zgodnie z oczekiwaniem |
-| Zamknięcie aplikacji                     | ✅       | Aplikacja zamyka się poprawnie        |
+| Test                                              | Status   | Uwagi                                                         |
+|---------------------------------------------------|----------|---------------------------------------------------------------|
+| Uruchomienie aplikacji                            | ✅       | Bez błędów                                                    |
+| Wybór kategorii - okno główne                     | ✅       | Działa poprawnie                                              |
+| Przycisk 'Rozpocznij' - okno główne               | ✅       | Działa poprawnie                                              |
+| Menu 'O programie' - okno główne                  | ✅       | Rozwija się poprawnie, opcje działają poprawnie               |
+| Menu 'Wyjście' - okno główne                      | ✅       | Aplikacja zamyka się poprawnie                                |
+| Przycisk 'Modyfikuj' - okno główne                | ✅       | Okno modyfikacji otwiera się poprawnie                        |
+| Ładowanie tabeli - okno modyfikacji               | ✅       | Dane ładowane są prawidłowo                                   |
+| Edycja słówka - okno modyfikacji                  | ✅       | Aktualizacja przebiega prawidłowo                             |
+| Usunięcie słówka - okno modyfikacji               | ✅       | Usuwanie działa prawidłowo                                    |
+| Tworzenie nowej kategorii - okno modyfikacji      | ✅       | Kategorie tworzone są prawidłowo                              |
+| Edycja kategorii - okno modyfikacji               | ✅       | Edycja przebiega prawidłowo                                   |
+| Dodawanie nowych słówek - okno modyfikacji        | ✅       | Słówka tworzone są prawidłowo                                 |
+| Odświeżanie danych - okno modyfikacji             | ✅       | Działa poprawnie                                              |
+| Menu 'Strona główna' - okno modyfikacji           | ✅       | Działa poprawnie                                              |
+| Menu 'Instrukcja' - okno modyfikacji              | ✅       | Wyświetla intrukcję poprawnie                                 |
+| Menu 'Wyjście' - okno modyfikacji                 | ✅       | Aplikacja zamyka się poprawnie                                |
+| Pobieranie słówek z bazy danych - okno nauki      | ✅       | Słówka pobierane są prawidłowo                                |
+| Tłumaczenie słówek - okno nauki                   | ✅       | Działa poprawnie                                              |
+| Informacja o prawidłowym tłumaczeniu - okno nauki | ✅       | Informacja o poprawności wyświetla się prawidłowo             |
+| Wyświetlanie prawidłowej odpowiedzi - okno nauki  | ✅       | Odpowiedź wyświetla się prawidłowo                            |
+| Przyciski ze znakami diaktrycznymi - okno nauki   | ✅       | Znaki są poprawnie dodawane do pola tekstowego                |
+| Przyciski ze strzałkami - okno nauki              | ✅       | Słówka przewijane są poprawnie                                |
+| Licznik postępu - okno nauki                      | ✅       | Postęp liczony jest prawidłowo                                |
+| Przyciski zmiany języka - okno nauki              | ✅       | Kolejność tłumaczeń (PL->ES, ES->PL) jest zmieniana poprawnie |
+| Wynik końcowy                                     | ✅       | Wynik i czas liczone są prawidłowo                            |
+| Menu 'Strona główna' - okno nauki                 | ✅       | Działa poprawnie                                              |
+| Menu 'Instrukcja' - okno nauki                    | ✅       | Wyświetla intrukcję poprawnie                                 |
+| Menu 'Wyjście' - okno nauki                       | ✅       | Aplikacja zamyka się poprawnie                                |
+| Menu 'Strona główna' - okno wyniku                | ✅       | Działa poprawnie                                              |
+| Menu 'Zamknij okno' - okno wyniku                 | ✅       | Działa poprawnie                                              |
 
 ---

@@ -4,6 +4,7 @@
 ```sql
 CREATE DATABASE FiszkiDB;
 go
+```
 
 ## Krok 2: Utwórz tabele
 ```sql
@@ -21,7 +22,7 @@ CREATE TABLE slowka (
     FOREIGN KEY (kategoria_id) REFERENCES kategorie(id)
 );
 go
-
+```
 ## Krok 3: Uzupełnij tabele danymi
 ```sql
 INSERT INTO kategorie (nazwa)
@@ -211,10 +212,11 @@ VALUES
     ('psychiatra', 'psiquiatra', 3),
     ('astronauta', 'astronauta', 3);
 go
-
+```
 ## Krok 4: Utwórz procedury
 
-### Dodawanie kategorii
+```sql
+
 CREATE PROCEDURE DodajKategorie
     @nazwa NVARCHAR(100)
 AS
@@ -229,7 +231,6 @@ BEGIN
 END;
 go
 
-### Dodawanie słówek
 CREATE PROCEDURE DodajSlowko
     @polski NVARCHAR(255),
     @hiszpanski NVARCHAR(255),
@@ -246,7 +247,6 @@ BEGIN
 END;
 go
 
-### Edycja kategorii
 CREATE PROCEDURE EdytujKategorie
     @id INT,
     @nowaNazwa NVARCHAR(100)
@@ -263,7 +263,6 @@ BEGIN
 END;
 go
 
-### Edycja słówek
 CREATE PROCEDURE EdytujSlowko
     @id INT,
     @nowyPolski NVARCHAR(255),
@@ -284,7 +283,6 @@ BEGIN
 END;
 go
 
-### Usuwanie kategorii
 CREATE PROCEDURE UsunKategorie
     @nazwa NVARCHAR(100)
 AS
@@ -299,7 +297,6 @@ BEGIN
 END;
 go
 
-### Usuwanie słówek
 CREATE PROCEDURE UsunSlowko
     @polski nvarchar(255),
 	@kategoria_id int
@@ -313,3 +310,4 @@ BEGIN
     END CATCH
 END;
 go
+```

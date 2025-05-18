@@ -162,7 +162,7 @@ VALUES
     ('teść', 'el suegro', 1),
     ('teściowa', 'la suegra', 1),
     ('zięć', 'el yerno', 1),
-    ('synowa', 'la nuera', 1);
+    ('synowa', 'la nuera', 1),
     ('poniedziałek', 'lunes', 4),
     ('wtorek', 'martes', 4),
     ('środa', 'miércoles', 4),

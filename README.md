@@ -166,7 +166,8 @@ Jako użytkownik, chcę wybrać opcję "Zamknij okno", aby zakończyć wyświetl
 
 ### a. Scenariusze testów
 
-###Okno główne
+### Okno główne
+
 1. **Test uruchomienia aplikacji**
 - Oczekiwany rezultat: Aplikacja otwiera się bez błędów.
 
@@ -185,7 +186,8 @@ Jako użytkownik, chcę wybrać opcję "Zamknij okno", aby zakończyć wyświetl
 6. **Test przycisku 'Modyfikuj'**
 - Oczekiwany rezultat: Po kliknięciu przycisku 'Modyfikuj', otwiera się nowe okno do modyfikacji fiszek.
 
-###Okno modyfikacji
+### Okno modyfikacji
+
 7.**Test ładowania słówek do tabeli**
 - Oczekiwany rezultat: Po wybraniu kategorii i kliknięciu przycisku 'Załaduj', dane pojawiają się w tabeli.
 
@@ -216,7 +218,7 @@ Oczekiwany rezultat: Po kliknięciu menu 'Pomoc', pojawia się instrukcja korzys
 16. **Test wyjścia z aplikacji z okna modyfikacji**
 Oczekiwany rezultat: Aplikacja zamyka się, po wybraniu opcji 'Wyjdź' z menu.
 
-Okno nauki
+### Okno nauki
 17. **Test pobierania słówek z bazy**
 - Oczekiwany rezultat: Po rozpoczęciu sesji, słówka są poprawnie pobierane z wybranej kategorii.
 
@@ -253,7 +255,7 @@ Okno nauki
 28. **Test wyjścia z aplikacji z okna nauki**
 - Oczekiwany rezultat: Aplikacja zamyka się po wybraniu opcji 'Wyjdź'.
 
-Okno wyniku
+### Okno wyniku
 29. **Test powrotu do strony głównej z okna wyniku**
 - Oczekiwany rezultat: Po wybraniu 'Strona główna' w menu, aplikacja wraca do strony głównej.
 

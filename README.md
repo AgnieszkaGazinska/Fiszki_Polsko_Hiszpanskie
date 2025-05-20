@@ -27,6 +27,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 
 ### Okno główne
+
 ### User Story 1: Otwieranie aplikacji
 Jako użytkownik, chcę otworzyć aplikację, aby móc rozpocząć naukę języka hiszpańskiego.
 
@@ -47,6 +48,7 @@ Jako użytkownik, chcę kliknąć przycisk 'Modyfikuj', aby otworzyć nowe okno,
 
 
 ### Okno modyfikacji
+
 ### User Story 7: Ładowanie słówek z danej kategorii do tabeli
 Jako użytkownik, chcę kliknąć przycisk, aby załadować dane do tabeli, wyświetlając słówka do edycji lub usunięcia, zgodnie z wybraną kategorią.
 
@@ -79,6 +81,7 @@ Jako użytkownik, chcę wybrać opcję "Wyjdź" z menu "Wyjście", aby zakończy
 
 
 ### Okno nauki
+
 ### User Story 17: Pobieranie słówek
 Jako użytkownik, chcę, aby dane słówek pobierane były z bazy danych, aby móc uczyć się tłumaczeń słówek wybranej kategorii.
 
